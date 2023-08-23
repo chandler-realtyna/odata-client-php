@@ -343,7 +343,7 @@ class Grammar implements IGrammar
     protected function whereFunction(Builder $query, $where)
     {
         $value = $this->prepareValue($where['value']);
-        return $where['operator'] . '(' . $where['column'] . ',' . $value . ')';
+        return $where['operator'] . '(' . $where['column'] . ', ' . $value . ')';
     }
 
     /**
